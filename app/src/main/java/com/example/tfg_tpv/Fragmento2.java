@@ -3,10 +3,16 @@ package com.example.tfg_tpv;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import com.example.tfg_tpv.RV_Cupones.rv_cupon;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +64,22 @@ public class Fragmento2 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragmento2, container, false);
+        View view = inflater.inflate(R.layout.fragment_fragmento3, container, false);
+
+        RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+        recyclerView.setHasFixedSize(true);
+
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 2); // 2 columnas
+        recyclerView.setLayoutManager(layoutManager);
+
+        List<String> myDataset = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            myDataset.add("Coupon " + i); // Aquí puedes añadir tus datos
+        }
+
+        RecyclerView.Adapter mAdapter = new rv_cupon(myDataset);
+        recyclerView.setAdapter(mAdapter);
+
+        return view;
     }
 }
