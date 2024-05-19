@@ -74,11 +74,13 @@
                 android:text="Ingrese su usuario"
                 android:alpha="1.7"
                 android:textStyle="bold"/>
+
             <EditText
+                android:id="@+id/txtUser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="text"
-                android:drawableEnd="@drawable/check" />
+                android:drawableEnd="@drawable/check"
+                android:inputType="text" />
 
             <View
                 android:layout_width="wrap_content"
@@ -89,11 +91,13 @@
                 android:text="Ingrese su contraseña"
                 android:alpha="1.7"
                 android:textStyle="bold"/>
+
             <EditText
+                android:id="@+id/txtpwd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
-                android:drawableEnd="@drawable/pwd" />
+                android:drawableEnd="@drawable/pwd"
+                android:inputType="textPassword" />
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -119,6 +123,7 @@
             android:layout_height="10dp" />
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:text="Iniciar sesión"
