@@ -6,25 +6,23 @@
     android:padding="16dp">
 
     <ImageView
-        android:id="@+id/couponImage"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_width="144dp"
+        android:layout_height="89dp"
         android:src="@drawable/carne" />
 
     <TextView
-        android:id="@+id/couponTitle"
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Food Coupon"
+        android:text="Carne"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/couponDescription"
+        android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="This is a food coupon."
+        android:text="5.99€/kg"
         android:textSize="16sp" />
 
 </LinearLayout>

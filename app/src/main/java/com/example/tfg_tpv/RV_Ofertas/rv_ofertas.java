@@ -1,4 +1,4 @@
-package com.example.tfg_tpv.RV_Folletos;
+package com.example.tfg_tpv.RV_Ofertas;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,10 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tfg_tpv.R;
+import com.example.tfg_tpv.RV_Folletos.rv_folletos;
 
 import java.util.List;
 
-public class rv_folletos extends RecyclerView.Adapter<rv_folletos.MyViewHolder> {
+public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
 
     private List<String> mDataset;
 
@@ -30,20 +31,19 @@ public class rv_folletos extends RecyclerView.Adapter<rv_folletos.MyViewHolder> 
         }
     }
 
-    public rv_folletos(List<String> myDataset) {
+    public rv_ofertas(List<String> myDataset) {
         mDataset = myDataset;
     }
 
     @NonNull
     @Override
-    public rv_folletos.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public rv_ofertas.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_folletos, parent, false);
-        return new MyViewHolder(v);
+        return new rv_ofertas.MyViewHolder(v);
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-
+    public void onBindViewHolder(rv_ofertas.MyViewHolder holder, int position) {
 
 
     }
@@ -53,3 +53,4 @@ public class rv_folletos extends RecyclerView.Adapter<rv_folletos.MyViewHolder> 
         return mDataset.size();
     }
 }
+

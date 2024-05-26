@@ -29,7 +29,7 @@
             android:layout_width="171dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
-            android:text="TFG_TPV"
+            android:text="Binary Technology S.L"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold" />

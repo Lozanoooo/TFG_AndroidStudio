@@ -44,15 +44,17 @@
     <FrameLayout
         android:id="@+id/frame1"
         android:layout_width="408dp"
-        android:layout_height="643dp"
+        android:layout_height="642dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"></FrameLayout>
+        app:layout_constraintVertical_bias="1.0">
+
+    </FrameLayout>
 
     <Button
         android:id="@+id/perfil"
@@ -70,9 +72,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="136dp"
-        android:layout_height="30dp"
-        android:text="TFG_TPV"
+        android:layout_width="267dp"
+        android:layout_height="40dp"
+        android:text="Binary Technology S.L"
         android:textColor="#3E5DCD"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/frame1"
