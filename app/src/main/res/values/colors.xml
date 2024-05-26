@@ -5,6 +5,7 @@
 
     <color name="primary">#124CDF</color>
     <color name="secondary">#124CDF</color>
+    <color name="C_4_bg" >#DBDBDB</color>
 
 
 </resources>

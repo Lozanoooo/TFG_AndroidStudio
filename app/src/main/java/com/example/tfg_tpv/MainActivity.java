@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.tfg_tpv.Fragmentos.Fragmento1;
+import com.example.tfg_tpv.Fragmentos.Fragmento3;
 import com.example.tfg_tpv.Profile.Profile;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,11 +24,6 @@ public class MainActivity extends AppCompatActivity {
     public void Home(View view) {
         Fragmento1 fragmento1 = new Fragmento1();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame1, fragmento1).commit();
-    }
-
-    public void cupones(View view) {
-        Fragmento2 fragmento2 = new Fragmento2();
-        getSupportFragmentManager().beginTransaction().replace(R.id.frame1, fragmento2).commit();
     }
 
     public void folletos(View view) {

@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Login">
+    tools:context=".Login.Login">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/primary"
+        android:background="@color/C_4_bg"
         android:alpha="0.7"/>
 
     <LinearLayout
@@ -47,6 +47,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/C_4_bg"
             android:orientation="vertical"
             android:padding="28dp" >
 
@@ -99,24 +100,6 @@
                 android:drawableEnd="@drawable/pwd"
                 android:inputType="textPassword" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Recordar usuario"
-                    android:textColor="@color/primary"
-                    android:alpha="0.7" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="¿Olvidaste tu contraseña?"
-                    android:layout_alignParentEnd="true"
-                    android:layout_centerVertical="true" />
-
-            </RelativeLayout>
 
             <View
             android:layout_width="wrap_content"

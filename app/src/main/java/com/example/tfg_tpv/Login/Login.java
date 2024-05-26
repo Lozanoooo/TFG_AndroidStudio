@@ -1,4 +1,4 @@
-package com.example.tfg_tpv;
+package com.example.tfg_tpv.Login;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.example.tfg_tpv.MainActivity;
+import com.example.tfg_tpv.R;
 
 public class Login extends AppCompatActivity {
 

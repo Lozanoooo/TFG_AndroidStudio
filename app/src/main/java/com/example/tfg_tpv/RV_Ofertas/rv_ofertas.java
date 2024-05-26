@@ -38,7 +38,7 @@ public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
     @NonNull
     @Override
     public rv_ofertas.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_folletos, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.rv_ofertas, parent, false);
         return new rv_ofertas.MyViewHolder(v);
     }
 

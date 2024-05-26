@@ -29,6 +29,7 @@
             android:src="@drawable/img" />
 
         <TextView
+            android:id="@+id/nom_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -38,6 +39,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/Ape_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -47,6 +49,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/CElec_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -56,6 +59,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/pwd_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
@@ -65,6 +69,7 @@
             android:textSize="18sp" />
 
         <TextView
+            android:id="@+id/tlf_user"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="3dp"
