@@ -10,19 +10,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tfg_tpv.R;
-import com.example.tfg_tpv.RV_Folletos.rv_folletos;
-
 import java.util.List;
 
 public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
 
-    private List<String> mDataset;
+    private List<oferta> mDataset; // Cambiado a lista de Oferta
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView imageView;
         public TextView title;
         public TextView price;
-
         public MyViewHolder(View v) {
             super(v);
             imageView = v.findViewById(R.id.imageView);
@@ -31,7 +28,7 @@ public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
         }
     }
 
-    public rv_ofertas(List<String> myDataset) {
+    public rv_ofertas(List<oferta> myDataset) { // Cambiado a lista de Oferta
         mDataset = myDataset;
     }
 
@@ -44,8 +41,9 @@ public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
 
     @Override
     public void onBindViewHolder(rv_ofertas.MyViewHolder holder, int position) {
-
-
+        oferta oferta = mDataset.get(position); // Obtén la oferta en la posición actual
+        holder.imageView.setImageResource(oferta.getImageResource()); // Establece la imagen
+        holder.title.setText(oferta.getTitle()); // Establece el título
     }
 
     @Override
@@ -53,4 +51,3 @@ public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
         return mDataset.size();
     }
 }
-

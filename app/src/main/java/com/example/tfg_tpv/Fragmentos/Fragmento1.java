@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.tfg_tpv.R;
+import com.example.tfg_tpv.RV_Ofertas.oferta;
 import com.example.tfg_tpv.RV_Ofertas.rv_ofertas;
 
 import java.util.ArrayList;
@@ -74,9 +75,10 @@ public class Fragmento1 extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3); // 2 columnas
         recyclerView.setLayoutManager(layoutManager);
 
-        List<String> myDataset = new ArrayList<>();
+        List<oferta> myDataset = new ArrayList<>();
         for (int i = 0; i < 9  ; i++) {
-            myDataset.add("Coupon " + i); // Aquí puedes añadir tus datos
+            int imageResource = getResources().getIdentifier("image" + i, "drawable", getActivity().getPackageName());
+            myDataset.add(new oferta(imageResource, "Coupon " + i));
         }
 
         RecyclerView.Adapter mAdapter = new rv_ofertas(myDataset);
