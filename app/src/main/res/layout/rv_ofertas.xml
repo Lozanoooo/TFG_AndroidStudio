@@ -20,20 +20,20 @@
             android:id="@+id/imageView"
             android:layout_width="144dp"
             android:layout_height="89dp"
-            android:src="@drawable/carne" />
+            android:src="@drawable/image2" />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Carne"
+            android:text="Yogurt batido de fresa"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="5.99€/kg"
+            android:text="0.99€/Unidad"
             android:textSize="16sp" />
 
     </LinearLayout>

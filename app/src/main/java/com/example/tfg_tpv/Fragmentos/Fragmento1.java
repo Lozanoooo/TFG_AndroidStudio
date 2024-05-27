@@ -75,10 +75,15 @@ public class Fragmento1 extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3); // 2 columnas
         recyclerView.setLayoutManager(layoutManager);
 
+        String[] nombresProductos = {"Air Frayer", "Yogurt bebido de fresa ", "PS5", "Producto 4", "Producto 5", "Producto 6", "Producto 7", "Producto 8", "Producto 9"};
+        double[] preciosProductos = {120.99, 0.991, 399.99, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0};
+
         List<oferta> myDataset = new ArrayList<>();
-        for (int i = 0; i < 9  ; i++) {
+        for (int i = 1; i <= 9; i++) {
             int imageResource = getResources().getIdentifier("image" + i, "drawable", getActivity().getPackageName());
-            myDataset.add(new oferta(imageResource, "Coupon " + i));
+            String nombre = nombresProductos[i-1];
+            double precio = preciosProductos[i-1];
+            myDataset.add(new oferta(imageResource, "Producto " + i, nombre, precio));
         }
 
         RecyclerView.Adapter mAdapter = new rv_ofertas(myDataset);

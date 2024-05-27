@@ -15,7 +15,7 @@ public class Folletos extends AppCompatActivity {
     }
 
     public void CatalogoAlimentacion(View view) {
-        Toast.makeText(this, "Catalogo de Alimentacion", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Catalogo de Alimentacmmmmmmmmmmmmion", Toast.LENGTH_SHORT).show();
 
     }
 

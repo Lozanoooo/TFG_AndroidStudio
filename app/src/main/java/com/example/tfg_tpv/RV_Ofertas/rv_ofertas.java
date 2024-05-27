@@ -43,7 +43,8 @@ public class rv_ofertas extends RecyclerView.Adapter<rv_ofertas.MyViewHolder> {
     public void onBindViewHolder(rv_ofertas.MyViewHolder holder, int position) {
         oferta oferta = mDataset.get(position); // Obtén la oferta en la posición actual
         holder.imageView.setImageResource(oferta.getImageResource()); // Establece la imagen
-        holder.title.setText(oferta.getTitle()); // Establece el título
+        holder.title.setText(oferta.getTitulo()); // Establece el título
+        holder.price.setText(String.valueOf(oferta.getPrecio())); // Establece el precio
     }
 
     @Override
