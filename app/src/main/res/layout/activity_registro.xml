@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg"
-    tools:context=".Login.Login">
+    tools:context=".Registro.Registro">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -54,21 +54,21 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bienvenido"
+                android:text="Registro"
                 android:textColor="@color/primary"
                 android:textSize="32dp"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Inicia sesión para continuar"
+                android:text="Crea una cuenta para continuar"
                 android:alpha="0.7" />
-            
+
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -86,6 +86,7 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -100,41 +101,52 @@
                 android:drawableEnd="@drawable/pwd"
                 android:inputType="textPassword" />
 
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Confirme su contraseña"
+                android:alpha="1.7"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtpwdConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/pwd"
+                android:inputType="textPassword" />
 
             <View
-            android:layout_width="wrap_content"
-            android:layout_height="10dp" />
+                android:layout_width="wrap_content"
+                android:layout_height="10dp" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/login"
+                android:id="@+id/register"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:text="Iniciar sesión"
+                android:text="Registrarse"
                 app:cornerRadius="32dp" />
+
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="10dp" />
 
             <Button
-                android:id="@+id/Register"
+                android:id="@+id/login"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
-                android:onClick="irRegistro"
-                android:text="¿No tienes cuenta? Regístrate"
+                android:onClick="irLogin"
+                android:text="¿Ya tienes cuenta? Inicia sesión"
                 android:textColor="@android:color/black" />
-
 
         </LinearLayout>
 
-
-
-
-
     </androidx.cardview.widget.CardView>
-
-
 
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package com.example.tfg_tpv.Fragmentos;
 
 import android.os.Bundle;
+import android.content.Context;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -75,18 +76,18 @@ public class Fragmento1 extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3); // 2 columnas
         recyclerView.setLayoutManager(layoutManager);
 
-        String[] nombresProductos = {"Air Frayer", "Yogurt bebido de fresa ", "PS5", "Producto 4", "Producto 5", "Producto 6", "Producto 7", "Producto 8", "Producto 9"};
-        double[] preciosProductos = {120.99, 0.991, 399.99, 400.0, 500.0, 600.0, 700.0, 800.0, 900.0};
+        String[] nombresProductos = {"Air Frayer", "Yogurt de fresa ", "PS5", "Patatas pringles", "Carne de vacuno/1kg", "Queso Semicurado/1kg ", "LG UHD- Smart TV 4K", "Producto 8", "Producto 9"};
+        double[] preciosProductos = {120.99, 0.99, 399.99, 1.99, 5.99, 4.95, 899.99, 800.0, 900.0};
 
         List<oferta> myDataset = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {
             int imageResource = getResources().getIdentifier("image" + i, "drawable", getActivity().getPackageName());
             String nombre = nombresProductos[i-1];
             double precio = preciosProductos[i-1];
-            myDataset.add(new oferta(imageResource, "Producto " + i, nombre, precio));
+            myDataset.add(new oferta(imageResource, nombre, nombre, precio)); // Usamos 'nombre' en lugar de "Producto " + i
         }
 
-        RecyclerView.Adapter mAdapter = new rv_ofertas(myDataset);
+        RecyclerView.Adapter mAdapter = new rv_ofertas(myDataset, getContext());
         recyclerView.setAdapter(mAdapter);
 
         return view;

@@ -14,7 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tfg_tpv.MainActivity;
 import com.example.tfg_tpv.R;
-
+import com.example.tfg_tpv.Registro.Registro;
 public class Login extends AppCompatActivity {
 
     @Override
@@ -26,6 +26,7 @@ public class Login extends AppCompatActivity {
         EditText username = findViewById(R.id.txtUser);
         EditText password = findViewById(R.id.txtpwd);
         Button login = findViewById(R.id.login);
+        Button register = findViewById(R.id.Register); // Asegúrate de reemplazar 'register' con el id correcto de tu botón de registro
 
         login.setOnClickListener(v -> {
             String inputUsername = username.getText().toString();
@@ -45,10 +46,17 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        register.setOnClickListener(v -> irRegistro()); // Esto vincula el método irRegistro() al evento de clic del botón de registro
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public void irRegistro() {
+        Intent intent = new Intent(this, Registro.class);
+        startActivity(intent);
     }
 }
