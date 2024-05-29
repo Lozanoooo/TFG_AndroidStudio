@@ -12,25 +12,26 @@
         android:scaleType="centerCrop" />
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/titulo"
         android:layout_width="376dp"
         android:layout_height="43dp"
         android:layout_marginTop="16dp"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/precio"
         android:layout_width="385dp"
         android:layout_height="39dp"
         android:layout_marginTop="8dp"
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/atrasbtn"
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
         android:text="Atras"
+        android:onClick="atras"
         android:textColor="@color/black" />
 
 </LinearLayout>

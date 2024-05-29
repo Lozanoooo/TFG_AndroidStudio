@@ -16,8 +16,8 @@ public class ProductoAcivity extends AppCompatActivity {
         setContentView(R.layout.activity_producto_acivity);
 
         ImageView imageView = findViewById(R.id.imageView);
-        TextView title = findViewById(R.id.title);
-        TextView price = findViewById(R.id.price);
+        TextView tituloView = findViewById(R.id.titulo);
+        TextView precioView = findViewById(R.id.precio);
 
         // Obtén los extras del Intent
         int imageResource = getIntent().getIntExtra("imageResource", 0);
@@ -26,7 +26,7 @@ public class ProductoAcivity extends AppCompatActivity {
 
         // Actualiza las vistas con los valores obtenidos
         imageView.setImageResource(imageResource);
-        title.setText(titulo);
-        price.setText(String.valueOf(precio + "€"));
+        tituloView.setText(titulo);
+        precioView.setText(String.valueOf(precio + "€"));
     }
 }
