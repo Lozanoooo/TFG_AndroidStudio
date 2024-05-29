@@ -76,8 +76,8 @@ public class Fragmento1 extends Fragment {
         RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getContext(), 3); // 2 columnas
         recyclerView.setLayoutManager(layoutManager);
 
-        String[] nombresProductos = {"Air Frayer", "Yogurt de fresa ", "PS5", "Patatas pringles", "Carne de vacuno/1kg", "Queso Semicurado/1kg ", "LG UHD- Smart TV 4K", "Producto 8", "Producto 9"};
-        double[] preciosProductos = {120.99, 0.99, 399.99, 1.99, 5.99, 4.95, 899.99, 800.0, 900.0};
+        String[] nombresProductos = {"Air Frayer", "Yogurt de fresa ", "PS5", "Patatas pringles", "Carne de vacuno/1kg", "Queso Semicurado/1kg ", "LG UHD- Smart TV 4K", "Barbacoa portatil sunja", "Esparragos en bote-carretilla"};
+        double[] preciosProductos = {120.99, 0.99, 399.99, 1.99, 5.99, 4.95, 899.99, 19.99, 2.95};
 
         List<oferta> myDataset = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {
