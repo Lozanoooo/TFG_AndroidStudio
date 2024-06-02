@@ -16,14 +16,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="124dp"
         android:orientation="vertical"
-        android:padding="20dp" >
-
-        <ImageView
-            android:layout_width="49dp"
-            android:layout_height="47dp"
-            android:src="@drawable/shopping" />
+        android:padding="20dp">
 
         <TextView
             android:layout_width="171dp"
@@ -46,10 +41,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="629dp"
             android:background="@color/C_4_bg"
             android:orientation="vertical"
-            android:padding="28dp" >
+            android:padding="28dp">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -62,8 +57,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Crea una cuenta para continuar"
-                android:alpha="0.7" />
+                android:alpha="0.7"
+                android:text="Crea una cuenta para continuar" />
 
             <View
                 android:layout_width="wrap_content"
@@ -72,9 +67,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ingrese su usuario"
                 android:alpha="1.7"
-                android:textStyle="bold"/>
+                android:text="Ingrese su usuario"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtUser"
@@ -90,9 +85,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ingrese su contraseña"
                 android:alpha="1.7"
-                android:textStyle="bold"/>
+                android:text="Ingrese su contraseña"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtpwd"
@@ -108,9 +103,9 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirme su contraseña"
                 android:alpha="1.7"
-                android:textStyle="bold"/>
+                android:text="Confirme su contraseña"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtpwdConfirm"
@@ -137,8 +132,8 @@
             <Button
                 android:id="@+id/login"
                 style="?android:attr/borderlessButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="307dp"
+                android:layout_height="41dp"
                 android:layout_gravity="center"
                 android:background="@android:color/transparent"
                 android:onClick="irLogin"

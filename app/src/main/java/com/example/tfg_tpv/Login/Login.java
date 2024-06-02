@@ -12,9 +12,21 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.tfg_tpv.Api.ApiInterface;
+import com.example.tfg_tpv.Api.LoginData;
+import com.example.tfg_tpv.Api.RetrofitClient;
 import com.example.tfg_tpv.MainActivity;
 import com.example.tfg_tpv.R;
 import com.example.tfg_tpv.Registro.Registro;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
 public class Login extends AppCompatActivity {
 
     @Override
@@ -26,27 +38,46 @@ public class Login extends AppCompatActivity {
         EditText username = findViewById(R.id.txtUser);
         EditText password = findViewById(R.id.txtpwd);
         Button login = findViewById(R.id.login);
-        Button register = findViewById(R.id.Register); // Asegúrate de reemplazar 'register' con el id correcto de tu botón de registro
+        Button register = findViewById(R.id.Register);
 
         login.setOnClickListener(v -> {
-            String inputUsername = username.getText().toString();
-            String inputPassword = password.getText().toString();
+            String ID_Cliente = username.getText().toString();
+            String contrasena = password.getText().toString();
 
-            if (inputUsername.equals("1") && inputPassword.equals("1")) {
-                // Login successful
-                Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
-
-                // Navigate to MainActivity
-                Intent intent = new Intent(Login.this, MainActivity.class);
-                startActivity(intent);
-                finish(); // This will finish the current activity (Login)
-            } else {
-                // Login failed
-                Toast.makeText(Login.this, "Login failed", Toast.LENGTH_SHORT).show();
+            if (ID_Cliente.isEmpty() || contrasena.isEmpty()) {
+                Toast.makeText(Login.this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show();
+                return;
             }
+
+            Map<String, String> loginData = new HashMap<>();
+            loginData.put("IDCliente", ID_Cliente);
+            loginData.put("contrasena", contrasena);
+
+            ApiInterface apiInterface = RetrofitClient.getClient("http://10.0.2.2:8080/").create(ApiInterface.class);
+            Call<ResponseBody> call = apiInterface.loginUser(loginData);
+
+            call.enqueue(new Callback<ResponseBody>() {
+                @Override
+                public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+                    if (response.isSuccessful()) {
+                        Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Login.this, MainActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                    } else {
+                        Toast.makeText(Login.this, "Login failed: " + response.message(), Toast.LENGTH_SHORT).show();
+                    }
+                }
+
+                @Override
+                public void onFailure(Call<ResponseBody> call, Throwable t) {
+                    Toast.makeText(Login.this, "Network error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                }
+            });
         });
 
-        register.setOnClickListener(v -> irRegistro()); // Esto vincula el método irRegistro() al evento de clic del botón de registro
+        register.setOnClickListener(v -> irRegistro());
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
