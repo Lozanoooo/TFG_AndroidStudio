@@ -13,7 +13,6 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tfg_tpv.Api.ApiInterface;
-import com.example.tfg_tpv.Api.LoginData;
 import com.example.tfg_tpv.Api.RetrofitClient;
 import com.example.tfg_tpv.MainActivity;
 import com.example.tfg_tpv.R;
@@ -35,8 +34,8 @@ public class Login extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
 
-        EditText username = findViewById(R.id.txtUser);
-        EditText password = findViewById(R.id.txtpwd);
+        EditText username = findViewById(R.id.txtidUser);
+        EditText password = findViewById(R.id.txtnom);
         Button login = findViewById(R.id.login);
         Button register = findViewById(R.id.Register);
 
