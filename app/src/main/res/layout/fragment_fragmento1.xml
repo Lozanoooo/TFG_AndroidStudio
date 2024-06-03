@@ -3,12 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/C_4_bg"
     tools:context=".Fragmentos.Fragmento1">
+
+    <TextView
+        android:id="@+id/tv_offers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/recyclerView"
+        android:layout_centerHorizontal="true"
+        android:text="Tus ofertas son:"
+        android:textSize="20sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="328dp"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="404dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/C_4_bg" />
 
 </RelativeLayout>

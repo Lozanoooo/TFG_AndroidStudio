@@ -1,14 +1,16 @@
 package com.example.tfg_tpv.Fragmentos;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.tfg_tpv.Folletos.WebViewActivity;
 import com.example.tfg_tpv.R;
 
 public class Fragmento3 extends Fragment {
@@ -44,33 +46,31 @@ public class Fragmento3 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_fragmento3, container, false);
 
-        Button button1 = view.findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CatalogoElectronica(v);
-            }
-        });
+        final WebView webView1 = view.findViewById(R.id.webView1);//se pone final para que se pueda acceder desde el boton, porque es una clase anonima
+        final WebView webView2 = view.findViewById(R.id.webView2);
 
-        Button button2 = view.findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CatalogoAlimentacion(v);
-            }
-        });
+       Button button1 = view.findViewById(R.id.button1);
+button1.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(getActivity(), WebViewActivity.class);
+        intent.putExtra("url", "///android_asset/Folleto.html");
+        startActivity(intent);
+    }
+});
+
+Button button2 = view.findViewById(R.id.button2);
+button2.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(getActivity(), WebViewActivity.class);
+        intent.putExtra("url", "///android_asset/Folleto.html");
+        startActivity(intent);
+    }
+});
 
         return view;
-    }
-
-    public void CatalogoAlimentacion(View view) {
-        Toast.makeText(getActivity(), "Catalogo de Alimentacion", Toast.LENGTH_SHORT).show();
-    }
-
-    public void CatalogoElectronica(View view) {
-        Toast.makeText(getActivity(), "Catalogo de Electronica", Toast.LENGTH_SHORT).show();
     }
 }

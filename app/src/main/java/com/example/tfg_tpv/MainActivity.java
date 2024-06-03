@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Cargar Fragmento1 por defecto
         Fragmento1 fragmento1 = new Fragmento1();
         getSupportFragmentManager().beginTransaction().replace(R.id.frame1, fragmento1).commit();
     }
