@@ -3,22 +3,20 @@ package com.example.tfg_tpv.Api;
 import com.google.gson.annotations.SerializedName;
 
 public class LoginData {
-    @SerializedName("ID_Cliente")
-    private String ID_Cliente;
+    @SerializedName("idCliente")
+    private String idCliente;
     @SerializedName("contrasena")
     private String contrasena;
 
-    public LoginData(String ID_Cliente, String contrasena) {
-        this.ID_Cliente = ID_Cliente;
+    public LoginData(String idCliente, String contrasena) {
+        this.idCliente = idCliente;
         this.contrasena = contrasena;
     }
 
-    public String getID_Cliente() {
-        return ID_Cliente;
-    }
+    public String getidCliente() {return idCliente;}
 
-    public void setID_Cliente(String ID_Cliente) {
-        this.ID_Cliente = ID_Cliente;
+    public void setidCliente(String idCliente) {
+        this.idCliente = idCliente;
     }
 
     public String getcontrasena() {
