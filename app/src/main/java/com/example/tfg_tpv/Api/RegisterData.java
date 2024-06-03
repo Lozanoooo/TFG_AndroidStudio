@@ -9,7 +9,7 @@ public class RegisterData {
     @SerializedName("nombre")
     private String nombre;
 
-    @SerializedName("apellido")
+    @SerializedName("apellidos")
     private String apellido;
 
     @SerializedName("telefono")

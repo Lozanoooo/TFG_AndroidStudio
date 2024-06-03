@@ -61,14 +61,14 @@ public class Registro extends AppCompatActivity {
             Map<String, String> registerDataMap = new HashMap<>();
             registerDataMap.put("idCliente", registerData.getIdCliente());
             registerDataMap.put("nombre", registerData.getNombre());
-            registerDataMap.put("apellido", registerData.getApellido());
+            registerDataMap.put("apellidos", registerData.getApellido());
             registerDataMap.put("telefono", registerData.getTelefono());
             registerDataMap.put("direccion", registerData.getDireccion());
             registerDataMap.put("email", registerData.getEmail());
             registerDataMap.put("cif", registerData.getCif());
             registerDataMap.put("contrasena", registerData.getContrasena());
 
-            ApiInterface apiInterface = RetrofitClient.getClient("http://10.0.2.2:9090/").create(ApiInterface.class);
+            ApiInterface apiInterface = RetrofitClient.getClient("http://10.0.2.2:8080/").create(ApiInterface.class);
 
             Call<ResponseBody> call = apiInterface.registerUser(registerDataMap);
             call.enqueue(new Callback<ResponseBody>() {

@@ -52,7 +52,7 @@ public class Login extends AppCompatActivity {
             loginData.put("idCliente", ID_Cliente);
             loginData.put("contrasena", contrasena);
 
-            ApiInterface apiInterface = RetrofitClient.getClient("http://10.0.2.2:9090/").create(ApiInterface.class);            Call<ResponseBody> call = apiInterface.loginUser(loginData);
+            ApiInterface apiInterface = RetrofitClient.getClient("http://10.0.2.2:8080/").create(ApiInterface.class);            Call<ResponseBody> call = apiInterface.loginUser(loginData);
 
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
