@@ -5,9 +5,6 @@ import com.google.gson.annotations.SerializedName;
 public class ProfileData {
     @SerializedName("idCliente")
     private String idCliente;
-
-
-
     @SerializedName("nombre")
     private String nombre;
 
