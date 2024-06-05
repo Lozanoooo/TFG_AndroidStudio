@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/imagenaplicacion"
     tools:context=".MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -32,26 +31,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
-    <Button
+        <Button
         android:id="@+id/perfil"
         android:layout_width="74dp"
         android:layout_height="42dp"
         android:drawableLeft="@drawable/profile"
+        android:background="#68C6F1"
         android:onClick="abrirPerfil"
-        android:textColorLink="#68C6F1"
         app:layout_constraintBottom_toTopOf="@+id/frame1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="298dp"
         android:layout_height="48dp"
         android:text="Binary Technology S.L"
         android:textColor="#03A9F4"
+        android:textColorHint="#F30000"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/frame1"
         app:layout_constraintEnd_toStartOf="@+id/perfil"

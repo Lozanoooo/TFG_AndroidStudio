@@ -1,6 +1,7 @@
 package com.example.tfg_tpv.Login;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -59,6 +60,11 @@ public class Login extends AppCompatActivity {
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     if (response.isSuccessful()) {
                         Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
+                        // Guardar el ID del usuario en las preferencias compartidas
+                        SharedPreferences sharedPreferences = getSharedPreferences("USUARIOS_INICIO", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.putString("idCliente", ID_Cliente);
+                        editor.apply();
                         Intent intent = new Intent(Login.this, MainActivity.class);
                         startActivity(intent);
                         finish();

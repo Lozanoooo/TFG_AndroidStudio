@@ -69,8 +69,7 @@
                     android:id="@+id/txtnom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/pwd"
-                    android:inputType="textPassword" />
+                    android:drawableEnd="@drawable/pwd" />
 
                 <View
                     android:layout_width="wrap_content"
@@ -87,8 +86,7 @@
                     android:id="@+id/txtApell"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/pwd"
-                    android:inputType="textPassword" />
+                    android:drawableEnd="@drawable/pwd" />
 
                 <!-- Campo de Teléfono -->
                 <TextView
