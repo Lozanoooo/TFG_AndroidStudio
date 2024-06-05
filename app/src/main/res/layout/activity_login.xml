@@ -55,7 +55,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bienvenido"
-                android:textColor="@color/primary"
+                android:textColor="#68C6F1"
                 android:textSize="32dp"
                 android:textStyle="bold" />
 
@@ -109,6 +109,7 @@
                 android:id="@+id/login"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
+                android:backgroundTint="#68C6F1"
                 android:text="Iniciar sesión"
                 app:cornerRadius="32dp" />
             <View

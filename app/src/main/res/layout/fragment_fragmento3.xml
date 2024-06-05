@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/C_4_bg"
+    android:background="@android:color/transparent"
     tools:context=".Fragmentos.Fragmento3">
 
     <FrameLayout
@@ -38,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="246dp"
         android:layout_marginTop="16dp"
-        android:background="@color/C_4_bg">
+        android:background="@android:color/transparent">
 
         <WebView
             android:id="@+id/webView2"

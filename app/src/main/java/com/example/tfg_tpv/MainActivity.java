@@ -24,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
 
         navigationView1 = findViewById(R.id.bottom_navigation);
 
+        // Inicializar Fragmento1 como el primer fragmento
+        Fragmento1 fragmento1 = new Fragmento1();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame1, fragmento1).commit();
+
         navigationView1.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

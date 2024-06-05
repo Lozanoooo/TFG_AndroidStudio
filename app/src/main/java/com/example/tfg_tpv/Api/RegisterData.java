@@ -3,8 +3,7 @@ package com.example.tfg_tpv.Api;
 import com.google.gson.annotations.SerializedName;
 
 public class RegisterData {
-    @SerializedName("idCliente")
-    private String idCliente;
+
 
     @SerializedName("nombre")
     private String nombre;
@@ -27,8 +26,8 @@ public class RegisterData {
     @SerializedName("contrasena")
     private String contrasena;
 
-    public RegisterData(String idCliente, String nombre, String apellido, String telefono, String direccion, String email, String cif, String contrasena) {
-        this.idCliente = idCliente;
+    public RegisterData(String nombre, String apellido, String telefono, String direccion, String email, String cif, String contrasena) {
+
         this.nombre = nombre;
         this.apellido = apellido;
         this.telefono = telefono;
@@ -36,14 +35,6 @@ public class RegisterData {
         this.email = email;
         this.cif = cif;
         this.contrasena = contrasena;
-    }
-
-    public String getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(String idCliente) {
-        this.idCliente = idCliente;
     }
 
     public String getNombre() {

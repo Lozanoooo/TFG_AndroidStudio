@@ -30,7 +30,6 @@ public class Registro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
 
-        EditText iduser = findViewById(R.id.txtidUser);
         EditText nombre = findViewById(R.id.txtnom);
         EditText apellido = findViewById(R.id.txtApell);
         EditText txtPhone = findViewById(R.id.txtTLF);
@@ -42,13 +41,12 @@ public class Registro extends AppCompatActivity {
         Button login = findViewById(R.id.login);
 
         register.setOnClickListener(v -> {
-            if(iduser.getText().toString().isEmpty() || nombre.getText().toString().isEmpty() || apellido.getText().toString().isEmpty() || txtPhone.getText().toString().isEmpty() || direccion.getText().toString().isEmpty() || email.getText().toString().isEmpty() || cif.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
+            if( nombre.getText().toString().isEmpty() || apellido.getText().toString().isEmpty() || txtPhone.getText().toString().isEmpty() || direccion.getText().toString().isEmpty() || email.getText().toString().isEmpty() || cif.getText().toString().isEmpty() || password.getText().toString().isEmpty()){
                 Toast.makeText(Registro.this, "Por favor, complete todos los campos.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
             RegisterData registerData = new RegisterData(
-                    iduser.getText().toString(),
                     nombre.getText().toString(),
                     apellido.getText().toString(),
                     txtPhone.getText().toString(),
@@ -59,7 +57,6 @@ public class Registro extends AppCompatActivity {
             );
 
             Map<String, String> registerDataMap = new HashMap<>();
-            registerDataMap.put("idCliente", registerData.getIdCliente());
             registerDataMap.put("nombre", registerData.getNombre());
             registerDataMap.put("apellidos", registerData.getApellido());
             registerDataMap.put("telefono", registerData.getTelefono());

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/C_4_bg"
+    android:background="@android:color/transparent"
     tools:context=".Fragmentos.Fragmento1">
 
     <TextView
@@ -20,6 +20,6 @@
         android:layout_width="match_parent"
         android:layout_height="404dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/C_4_bg" />
+        android:background="@android:color/transparent" />
 
 </RelativeLayout>

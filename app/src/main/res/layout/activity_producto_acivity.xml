@@ -3,12 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@android:color/transparent"
     android:padding="16dp">
+
+    <Button
+        android:id="@+id/atrasbtn"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="#3E5DCD"
+        android:text="Atras"
+        android:onClick="atras"
+        android:drawableLeft="@drawable/arrow_back_24"
+        android:textColor="@color/black" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="387dp"
-        android:layout_height="299dp"
+        android:layout_height="443dp"
         android:scaleType="centerCrop" />
 
     <TextView
@@ -16,22 +27,14 @@
         android:layout_width="387dp"
         android:layout_height="67dp"
         android:layout_marginTop="16dp"
-        android:textSize="20sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/precio"
         android:layout_width="378dp"
         android:layout_height="47dp"
         android:layout_marginTop="8dp"
-        android:textSize="16sp" />
+        android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/atrasbtn"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:text="Atras"
-        android:onClick="atras"
-        android:textColor="@color/black" />
 
 </LinearLayout>
