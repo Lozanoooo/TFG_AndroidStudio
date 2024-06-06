@@ -14,39 +14,28 @@ import android.view.ViewGroup;
 import com.example.tfg_tpv.R;
 import com.example.tfg_tpv.RV_Ofertas.oferta;
 import com.example.tfg_tpv.RV_Ofertas.rv_ofertas;
+import com.google.android.gms.maps.MapView;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.GoogleMap;
 
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Fragmento1#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Fragmento1 extends Fragment {
+public class Fragmento1 extends Fragment implements OnMapReadyCallback {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private MapView mapView;
+    private GoogleMap gmap;
 
     public Fragmento1() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Fragmento1.
-     */
-    // TODO: Rename and change types and number of parameters
     public static Fragmento1 newInstance(String param1, String param2) {
         Fragmento1 fragment = new Fragmento1();
         Bundle args = new Bundle();
@@ -55,7 +44,6 @@ public class Fragmento1 extends Fragment {
         fragment.setArguments(args);
         return fragment;
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,7 +52,6 @@ public class Fragmento1 extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -90,6 +77,34 @@ public class Fragmento1 extends Fragment {
         RecyclerView.Adapter mAdapter = new rv_ofertas(myDataset, getContext());
         recyclerView.setAdapter(mAdapter);
 
+        mapView = view.findViewById(R.id.mapView);
+        mapView.onCreate(savedInstanceState);
+        mapView.getMapAsync(this);
+
         return view;
+    }
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        gmap = googleMap;
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        mapView.onResume();
+    }
+    @Override
+    public void onPause() {
+        mapView.onPause();
+        super.onPause();
+    }
+    @Override
+    public void onDestroy() {
+        mapView.onDestroy();
+        super.onDestroy();
+    }
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        mapView.onLowMemory();
     }
 }

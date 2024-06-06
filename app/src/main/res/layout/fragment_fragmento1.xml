@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent"
+    android:background="@drawable/bg_degradado"
     tools:context=".Fragmentos.Fragmento1">
 
     <TextView
@@ -18,8 +18,21 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="404dp"
+        android:layout_height="356dp"
         android:layout_alignParentBottom="true"
         android:background="@android:color/transparent" />
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="236dp"
+        android:layout_height="214dp"
+        android:layout_above="@+id/tv_offers"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="113dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="21dp" />
 
 </RelativeLayout>
