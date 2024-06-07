@@ -28,12 +28,12 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-        <Button
+    <Button
         android:id="@+id/perfil"
-        android:layout_width="74dp"
-        android:layout_height="42dp"
-        android:drawableLeft="@drawable/profile"
+        android:layout_width="95dp"
+        android:layout_height="45dp"
         android:background="#68C6F1"
+        android:drawableLeft="@drawable/profile"
         android:onClick="abrirPerfil"
         app:layout_constraintBottom_toTopOf="@+id/frame1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,10 +41,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="298dp"
-        android:layout_height="48dp"
+        android:layout_width="322dp"
+        android:layout_height="41dp"
         android:text="Binary Technology S.L"
         android:textColor="#03A9F4"
         android:textColorHint="#F30000"

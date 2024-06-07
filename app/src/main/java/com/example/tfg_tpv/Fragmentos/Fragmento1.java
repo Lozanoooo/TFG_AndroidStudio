@@ -1,5 +1,7 @@
 package com.example.tfg_tpv.Fragmentos;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.content.Context;
 
@@ -10,18 +12,21 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.example.tfg_tpv.R;
 import com.example.tfg_tpv.RV_Ofertas.oferta;
 import com.example.tfg_tpv.RV_Ofertas.rv_ofertas;
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.MapView;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fragmento1 extends Fragment implements OnMapReadyCallback {
+public class Fragmento1 extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
@@ -29,8 +34,6 @@ public class Fragmento1 extends Fragment implements OnMapReadyCallback {
     private String mParam1;
     private String mParam2;
 
-    private MapView mapView;
-    private GoogleMap gmap;
 
     public Fragmento1() {
         // Required empty public constructor
@@ -44,6 +47,7 @@ public class Fragmento1 extends Fragment implements OnMapReadyCallback {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +56,7 @@ public class Fragmento1 extends Fragment implements OnMapReadyCallback {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -69,42 +74,31 @@ public class Fragmento1 extends Fragment implements OnMapReadyCallback {
         List<oferta> myDataset = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {
             int imageResource = getResources().getIdentifier("image" + i, "drawable", getActivity().getPackageName());
-            String nombre = nombresProductos[i-1];
-            double precio = preciosProductos[i-1];
+            String nombre = nombresProductos[i - 1];
+            double precio = preciosProductos[i - 1];
             myDataset.add(new oferta(imageResource, nombre, nombre, precio)); // Usamos 'nombre' en lugar de "Producto " + i
         }
 
         RecyclerView.Adapter mAdapter = new rv_ofertas(myDataset, getContext());
         recyclerView.setAdapter(mAdapter);
 
-        mapView = view.findViewById(R.id.mapView);
-        mapView.onCreate(savedInstanceState);
-        mapView.getMapAsync(this);
 
+        ImageView imageViewMap = view.findViewById(R.id.imageViewMap);
+        imageViewMap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Define la ubicación. En este caso, las coordenadas de Madrid, España.
+                Uri gmmIntentUri = Uri.parse("geo:40.3502951,-3.8992113");
+
+                // Crea el Intent para abrir la aplicación de mapas
+                Intent i = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+
+                // Asegúrate de que haya una aplicación para manejar el Intent
+                if (i.resolveActivity(getActivity().getPackageManager()) != null) {
+                    startActivity(i);
+                }
+            }
+        });
         return view;
-    }
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        gmap = googleMap;
-    }
-    @Override
-    public void onResume() {
-        super.onResume();
-        mapView.onResume();
-    }
-    @Override
-    public void onPause() {
-        mapView.onPause();
-        super.onPause();
-    }
-    @Override
-    public void onDestroy() {
-        mapView.onDestroy();
-        super.onDestroy();
-    }
-    @Override
-    public void onLowMemory() {
-        super.onLowMemory();
-        mapView.onLowMemory();
     }
 }
