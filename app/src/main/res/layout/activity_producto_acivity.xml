@@ -8,11 +8,12 @@
 
     <Button
         android:id="@+id/atrasButton"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#68C6"
+        android:drawableLeft="@drawable/arrow_back_24"
         android:onClick="atras"
-        android:text="Atrás"
+        android:text="atrás"
         android:textColor="@color/black" />
 
     <ImageView

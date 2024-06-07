@@ -1,66 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/bg_degradado"
     tools:context=".Fragmentos.Fragmento3">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="224dp">
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:background="@drawable/bg_degradado">
 
-        <WebView
-            android:id="@+id/webView1"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="165dp" />
+            android:layout_height="224dp">
 
-        <Button
-            android:id="@+id/button1"
+            <WebView
+                android:id="@+id/webView1"
+                android:layout_width="match_parent"
+                android:layout_height="165dp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="176dp"
+                android:background="@drawable/folletoelectro"
+                android:onClick="CatalogoElectronica" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/C_4_bg"
+                android:fontFamily="sans-serif-black"
+                android:text="Catálogo de Electrónica"
+                android:textSize="20sp" />
+
+        </FrameLayout>
+
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="176dp"
-            android:background="@drawable/folletoelectro"
-            android:onClick="CatalogoElectronica" />
+            android:layout_height="202dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent">
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/C_4_bg"
-            android:fontFamily="sans-serif-black"
-            android:text="Catálogo de Electrónica"
-            android:textSize="20sp" />
+            <WebView
+                android:id="@+id/webView2"
+                android:layout_width="match_parent"
+                android:layout_height="203dp" />
 
-    </FrameLayout>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="204dp"
+                android:background="@drawable/folletoalim"
+                android:onClick="CatalogoAlimentacion" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="202dp"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/transparent">
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/C_4_bg"
+                android:fontFamily="sans-serif-black"
+                android:text="Catálogo de Alimentación"
+                android:textSize="20sp" />
 
-        <WebView
-            android:id="@+id/webView2"
-            android:layout_width="match_parent"
-            android:layout_height="203dp" />
+        </FrameLayout>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="204dp"
-            android:background="@drawable/folletoalim"
-            android:onClick="CatalogoAlimentacion" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/C_4_bg"
-            android:fontFamily="sans-serif-black"
-            android:text="Catálogo de Alimentación"
-            android:textSize="20sp" />
-
-    </FrameLayout>
-
-</LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

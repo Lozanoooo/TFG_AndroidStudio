@@ -5,20 +5,35 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_degradado"
     tools:context=".Fragmentos.Fragmento1">
-
     <ImageView
-        android:id="@+id/imageViewMap"
-        android:layout_width="265dp"
-        android:layout_height="182dp"
+        android:id="@+id/imageViewBorder"
+        android:layout_width="290dp"
+        android:layout_height="204dp"
         android:layout_above="@+id/tv_offers"
         android:layout_alignEnd="@+id/tv_offers"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="123dp"
-        android:layout_marginTop="114dp"
-        android:layout_marginEnd="-111dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="-68dp"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/image_border" />
+
+    <ImageView
+        android:id="@+id/imageViewMap"
+        android:layout_width="276dp"
+        android:layout_height="188dp"
+        android:layout_above="@+id/tv_offers"
+        android:layout_alignEnd="@+id/tv_offers"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="-64dp"
+        android:layout_marginBottom="45dp"
         android:src="@drawable/maptfg" />
+
+
 
     <TextView
         android:id="@+id/tv_offers"
@@ -27,6 +42,7 @@
         android:layout_above="@+id/recyclerView"
         android:layout_centerHorizontal="true"
         android:fontFamily="sans-serif-black"
+        android:gravity="center|center_vertical"
         android:text="Tus ofertas son:"
         android:textSize="20sp" />
 
@@ -39,18 +55,19 @@
 
     <TextView
         android:id="@+id/TV_ubi"
-        android:layout_width="wrap_content"
-        android:layout_height="65dp"
+        android:layout_width="195dp"
+        android:layout_height="39dp"
         android:layout_above="@+id/tv_offers"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="255dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="247dp"
         android:fontFamily="sans-serif-black"
-        android:text="Donde estamos ubicados? VISITANOS!!"
+        android:gravity="center"
+        android:text="¡¡VISITANOS!!"
         android:textSize="20sp" />
 
 </RelativeLayout>
