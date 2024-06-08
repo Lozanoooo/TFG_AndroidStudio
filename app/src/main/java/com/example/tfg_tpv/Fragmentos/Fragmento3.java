@@ -66,7 +66,7 @@ button2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(getActivity(), WebViewActivity.class);
-        intent.putExtra("url", "///android_asset/Folleto.html");
+        intent.putExtra("url", "///android_asset/Folleto_alim.html");
         startActivity(intent);
     }
 });

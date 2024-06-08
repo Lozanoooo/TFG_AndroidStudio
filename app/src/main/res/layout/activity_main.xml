@@ -30,9 +30,9 @@
 
     <Button
         android:id="@+id/perfil"
-        android:layout_width="95dp"
+        android:layout_width="79dp"
         android:layout_height="45dp"
-        android:background="#68C6F1"
+        android:background="@android:color/transparent"
         android:drawableLeft="@drawable/profile"
         android:onClick="abrirPerfil"
         app:layout_constraintBottom_toTopOf="@+id/frame1"
@@ -44,8 +44,10 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="322dp"
-        android:layout_height="41dp"
+        android:layout_width="340dp"
+        android:layout_height="44dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
         android:text="Binary Technology S.L"
         android:textColor="#03A9F4"
         android:textColorHint="#F30000"

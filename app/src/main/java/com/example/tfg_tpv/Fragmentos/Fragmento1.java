@@ -17,11 +17,7 @@ import android.widget.ImageView;
 import com.example.tfg_tpv.R;
 import com.example.tfg_tpv.RV_Ofertas.oferta;
 import com.example.tfg_tpv.RV_Ofertas.rv_ofertas;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +65,7 @@ public class Fragmento1 extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         String[] nombresProductos = {"Air Frayer", "Yogurt de fresa ", "PS5", "Patatas pringles", "Carne de vacuno/1kg", "Queso Semicurado/1kg ", "LG UHD- Smart TV 4K", "Barbacoa portatil sunja", "Espárragos verdes en bote | Calidad Primera | Carretilla"};
-        double[] preciosProductos = {120.99, 0.99, 399.99, 1.99, 5.99, 4.95, 899.99, 19.99, 2.95};
+        double[] preciosProductos = {120.99, 0.40, 399.99, 1.99, 5.99, 4.95, 899.99, 19.99, 2.95};
 
         List<oferta> myDataset = new ArrayList<>();
         for (int i = 1; i <= 9; i++) {

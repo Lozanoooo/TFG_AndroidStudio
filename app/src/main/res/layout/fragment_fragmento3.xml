@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,7 +12,17 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:orientation="vertical"
+        android:gravity="center"
         android:background="@drawable/bg_degradado">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-black"
+            android:text="Catálogo de Electrónica"
+            android:textSize="20sp" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -19,53 +30,55 @@
 
             <WebView
                 android:id="@+id/webView1"
-                android:layout_width="match_parent"
-                android:layout_height="165dp" />
+                android:layout_width="277dp"
+                android:layout_height="173dp" >
+            </WebView>
 
             <Button
                 android:id="@+id/button1"
-                android:layout_width="match_parent"
-                android:layout_height="176dp"
-                android:background="@drawable/folletoelectro"
+                android:layout_width="277dp"
+                android:layout_height="173dp"
                 android:onClick="CatalogoElectronica" />
 
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/C_4_bg"
-                android:fontFamily="sans-serif-black"
-                android:text="Catálogo de Electrónica"
-                android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/imageViewelectro"
+                android:layout_width="277dp"
+                android:layout_height="173dp"
+                android:src="@drawable/folletoelectro" />
 
         </FrameLayout>
 
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:fontFamily="sans-serif-black"
+            android:text="Catálogo de Alimentación"
+            android:textSize="20sp" />
+
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="202dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="286dp"
+            android:layout_marginTop="1dp"
             android:background="@android:color/transparent">
 
             <WebView
                 android:id="@+id/webView2"
-                android:layout_width="match_parent"
-                android:layout_height="203dp" />
+                android:layout_width="284dp"
+                android:layout_height="177dp" />
 
             <Button
                 android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="204dp"
-                android:background="@drawable/folletoalim"
+                android:layout_width="284dp"
+                android:layout_height="177dp"
                 android:onClick="CatalogoAlimentacion" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/C_4_bg"
-                android:fontFamily="sans-serif-black"
-                android:text="Catálogo de Alimentación"
-                android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/imageViewalim"
+                android:layout_width="284dp"
+                android:layout_height="177dp"
+                android:src="@drawable/folletoalim" />
 
         </FrameLayout>
 
