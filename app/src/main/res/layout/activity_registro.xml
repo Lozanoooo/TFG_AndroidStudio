@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".Registro.Registro">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/C_4_bg"
+        android:alpha="0.7"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="343dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Binary Global S.L"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardCornerRadius="28dp"
+        android:layout_marginBottom="-20dp"
+        >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/C_4_bg"
+                android:orientation="vertical"
+                android:padding="28dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registro"
+                    android:textColor="#68C6F1"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su nombre"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtnom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su apellido"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtApell"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <!-- Campo de Teléfono -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su teléfono"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtTLF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su dirección"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtDireccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPostalAddress" />
+
+                <!-- Campo de Email -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su email"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress" />
+
+                <!-- Campo de CIF -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su CP"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtCIF"
+                    android:layout_width="363dp"
+                    android:layout_height="41dp"
+                    android:inputType="text" />
+
+                <!-- Campo de Contraseña -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="1.7"
+                    android:text="Ingrese su contraseña"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/txtPass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/pwd"
+                    android:inputType="textPassword" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/register"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:backgroundTint="#68C6F1"
+                    android:text="Registrarse"
+                    app:cornerRadius="32dp" />
+
+                <Button
+                    android:id="@+id/login"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="307dp"
+                    android:layout_height="41dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:onClick="irLogin"
+                    android:text="¿Ya tienes cuenta? Inicia sesión"
+                    android:textColor="@android:color/black" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_degradado"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/atrasButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#68C6"
+        android:drawableLeft="@drawable/arrow_back_24"
+        android:onClick="atras"
+        android:text="atrás"
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="380dp"
+        android:layout_height="416dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="387dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/precio"
+        android:layout_width="378dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="8dp"
+        android:textSize="24sp" />
+
+
+</LinearLayout>

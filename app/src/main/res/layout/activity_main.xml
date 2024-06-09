@@ -1,7 +1,61 @@
-<?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"/>
+    android:background="@drawable/bg_degradado"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="411dp"
+        android:layout_height="56dp"
+        android:background="#68C6F1"
+        app:itemTextColor="@color/black"
+        app:itemIconTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+ <FrameLayout
+    android:id="@+id/frame1"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/perfil"
+        android:layout_width="79dp"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/profile"
+        android:onClick="abrirPerfil"
+        app:layout_constraintBottom_toTopOf="@+id/frame1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="340dp"
+        android:layout_height="44dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Binary Global S.L"
+        android:textColor="#03A9F4"
+        android:textColorHint="#F30000"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/frame1"
+        app:layout_constraintEnd_toStartOf="@+id/perfil"
+        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .title{
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+
+        }
+        .title h2{
+            font-size: 5px;
+            font-weight: 200;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+        }
+        
+
+        body{
+            margin: 0 auto;
+            max-width: 1200px;
+            font-family: 'Lato';
+            color: #333;
+        }
+
+        .icon-cart:hover{
+            cursor: pointer;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        /* Header */
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0 40px 0;
+        }
+
+        .icon-close{
+            width: 25px;
+            height: 25px;
+        }
+
+        .icon-close:hover{
+            stroke: red;
+            cursor: pointer;
+        }
+
+        .hidden-cart{
+            display: none;
+        }
+
+        /* Se encarga de colocar las imagnes como rejillas */
+        .container-items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .item{
+            border-radius: 10px;
+        }
+
+        .item:hover{
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+        }
+
+        .item img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: all .5s;
+        }
+
+        .item figure{
+            overflow: hidden;
+        }
+
+        .item:hover img{
+            transform: scale(1.2);
+        }
+
+        .producto{
+            padding: 15px 30px;
+            line-height: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .producto button{
+            border: none;
+            background: none;
+            background-color: #1a92ca;
+            color: #fff;
+            padding: 15px 10px;
+            cursor: pointer;
+        }
+        .section {
+        margin: 20px;
+        border: 1px solid #000;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+    .ofertas-especiales {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-top: 20px;
+}
+@media (max-width: 768px) {
+        .container-items{
+            grid-template-columns: 1fr;
+        }
+        .item{
+            margin-bottom: 20px;
+        }
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="title">TFV BINARY GLOBAL: ELECTRÓNICA</h1>
+        <div class="container-icon">
+        </header>
+    <h2 class="title h2">Productos del catálogo</h2>
+    <div class="container-items">
+        
+     
+        <div class="item">
+            <figure>
+                <img src="https://btray.com/wp-content/uploads/Capsule-coffee-machine-START-for-hotels.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Máquina de café START</h2>
+                <p class="price">69,99 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://cdn.grupoelcorteingles.es/SGFM/dctm/MEDIA03/202209/09/00107740756098____6__1200x1200.jpg?impolicy=Resize&width=1200" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Batidora de vaso Moulinex PerfectMix LM871D con cuchillas Powelix y panel táctil</h2>
+                <p class="price">99,99 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://images.samsung.com/is/image/samsung/es-galaxy-a71-sm-a715fzsuphe-front-204952284?$684_547_JPG$" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Samsung Galaxy A71</h2>
+                <p class="price">749,99 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://mobilmarked.no/wp-content/uploads/2021/07/refurb-ipad-cell-space-gray-2020.png" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Apple iPad 10.2" (2020) WiFi + Cellular </h2>
+                <p class="price">749,99 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://rossellimac.es/cdn/shop/files/iPhone_15_Pro_Blue_Titanium_PDP_Image_Position-1__ESES.jpg?v=1694757684&width=1680" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>iPhone 15 Pro</h2>
+                <p class="price">1119,99 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="https://www.apple.com/newsroom/images/product/mac/standard/Apple_16-inch-MacBook-Pro_111319_big.jpg.large.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Apple-MacBook Pro 15 pulgadas</h2>
+                <p class="price">850 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+<div class="section"> 
+        <h1 class="title">OFERTAS HASTA FINAL DE MES!</h1>
+    <div class="item">
+        <figure>
+            <img src="https://thumb.pccomponentes.com/w-530-530/articles/1065/10650810/1585-pny-geforce-rtx-4090-tf-verto-edition-24gb-gddr6x.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>PNY GeForce RTX 4090 TF Verto Edition 24GB GDDR6X DLSS3
+                </h2>
+            <p class="price">1999,99 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+<div class="item">
+    <figure>
+        <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTDuIa-5ohY4T4Gu9R6Mp0SVYgZppBDiOQmYuQctZV3oqNuh2yxbsXo7xsanxqpc4bFY8JKJWyaQPdUOz8k_mzbGHZEp7-0CNWh0MlvZi04PUpyYKjLypQ0B5g" alt="productos"/>
+    </figure>
+    <div class="producto">
+        <h2>Microondas Balay 3CG6112-3</h2>
+        <p class="price">120,90 €</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
+<div class="item">
+    <figure>
+        <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQDd-YiEGNGpbVkLW3gEak0fpyVUE_UCMd7EPWYIsjiYQai1LQ-TQTxURftZTd1bX6Dp9TPjw4kIEizt0_PEwZ_gxj9Oo4a9blbzWA_iqZCmPN7V0Sta7cS" alt="productos"/>
+    </figure>
+    <div class="producto">
+        <h2>pack de 3 USB SanDisk Cruzer Blade 32GB </h2>
+        <p class="price">4.99 €</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
+
+<div class="ofertas-especiales">
+        <h2 class="title h2">¡Ofertas especiales de Televisiones! </h2>
+        <div class="item">
+            <figure>
+                <img src="https://www.lg.com/es/images/television/md07502937/gallery/dz-01.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>LG 70UN71006LA - Smart TV 4K UHD 177 cm (70'') con Inteligencia Artificial</h2>
+                <p class="price">499,90 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+</div>
+
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especiales de hornos! </h2>
+    <div class="item">
+        <figure>
+            <img src="https://italiandesign.es/cocina/wp-content/uploads/2020/09/IDECUROB07_01.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Air fryer</h2>
+            <p class="price">99,99 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especiales de videoconsolas! </h2>
+    <div class="item">
+        <figure>
+            <img src="https://m.media-amazon.com/images/I/51fM0CKG+HL._SL1500_.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>PlayStation 5 slim</h2>
+            <p class="price">350,00 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especiales en Barbacoa! </h2>
+    <div class="item">
+        <figure>
+            <img src="https://m.media-amazon.com/images/I/61Z-ubsg9kS._AC_SL1500_.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Afungo Barbacoa Portátil de Carbón,BBQ Barbacoa Leña con Parrillas y Piernas Desmontable </h2>
+            <p class="price">29,99 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
+

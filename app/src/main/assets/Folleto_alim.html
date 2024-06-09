@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Tienda</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .title{
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+
+        }
+        .title h2{
+            font-size: 5px;
+            font-weight: 200;
+            text-align: center;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+
+        body{
+            margin: 0 auto;
+            max-width: 1200px;
+            font-family: 'Lato';
+            color: #333;
+        }
+
+        .icon-cart:hover{
+            cursor: pointer;
+        }
+
+        img{
+            max-width: 100%;
+        }
+
+        /* Header */
+        header{
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0 40px 0;
+        }
+
+        .icon-close{
+            width: 25px;
+            height: 25px;
+        }
+
+        .icon-close:hover{
+            stroke: red;
+            cursor: pointer;
+        }
+
+        .hidden-cart{
+            display: none;
+        }
+
+        /* Se encarga de colocar las imagnes como rejillas */
+        .container-items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .item{
+            border-radius: 10px;
+        }
+
+        .item:hover{
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+        }
+
+        .item img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+            transition: all .5s;
+        }
+
+        .item figure{
+            overflow: hidden;
+        }
+
+        .item:hover img{
+            transform: scale(1.2);
+        }
+
+        .producto{
+            padding: 15px 30px;
+            line-height: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .producto button{
+            border: none;
+            background: none;
+            background-color: #1a92ca;
+            color: #fff;
+            padding: 15px 10px;
+            cursor: pointer;
+        }
+        .section {
+        margin: 20px;
+        border: 1px solid #000;
+        padding: 20px;
+        background-color: #f9f9f9;
+    }
+    .ofertas-especiales {
+    border: 1px solid #000;
+    padding: 20px;
+    margin-top: 20px;
+}
+  @media (max-width: 768px) {
+        .container-items{
+            grid-template-columns: 1fr;
+        }
+        .item{
+            margin-bottom: 20px;
+        }
+    }
+
+
+    </style>
+</head>
+<body>
+        <header>
+        <h1 class="title">TFV BINARY GLOBAL: ALIMENTACIÓN</h1>
+        <div class="container-icon">
+        </header>
+    <h2 class="title h2">Productos del catálogo</h2>
+    <div class="container-items">
+        
+     
+        <div class="item">
+            <figure>
+                <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202104/14/00118003501204____7__1200x1200.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>GALLO Macarrones paquete 450 g</h2>
+                <p class="price">1.39 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://www.dia.es/product_images/150913/150913_ISO_0_ES.jpg?imwidth=392" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Caldo casero de pollo 100% natural Gallina Blanca 1litro</h2>
+                <p class="price">2,20 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202403/14/00118910500067____3__600x600.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>PESCANOVA Filetes de bacalao estuche 400 g neto escurrido</h2>
+                <p class="price">8,69 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202106/18/00118850403926____5__600x600.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>CAMPOFRIO
+                    Pizza & Salsa pizza de pollo asado con salsa de mostaza y miel envase 355 g</h2>
+                <p class="price">2,95 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+        <div class="item">
+            <figure>
+                <img src="https://m.media-amazon.com/images/I/71p3I6NNIEL._AC_SL1500_.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Red Bull Bebida energética sin azúcar, 250 ml, 24 Unidades (Paquete de 1)</h2>
+                <p class="price">24,99 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+
+        <div class="item">
+            <figure>
+                <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202309/14/00118460511357____4__600x600.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Pechuga de pollo 2 unidades peso aproximado bandeja 500 g</h2>
+                <p class="price">3,73 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+<div class="section"> 
+        <h1 class="title">OFERTAS HASTA FINAL DE MES 2x1!</h1>
+    <div class="item">
+        <figure>
+            <img src="https://static.chollometro.com/threads/raw/sd2xe/1274408_1/re/1024x1024/qt/60/1274408_1.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Burger meat de vacuno raza angus sin gluten 2 unidades bandeja 320 g
+                </h2>
+            <p class="price">5,50 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+<div class="item">
+    <figure>
+        <img src="https://m.media-amazon.com/images/I/81rd-24QDXL._AC_SX679_PIbundle-24,TopRight,0,0_SH20_.jpg" alt="productos"/>
+    </figure>
+    <div class="producto">
+        <h2>Coca Cola Bebida Refrescante - Paquete de 24 x 13.75 ml - Total: 330 ml</h2>
+        <p class="price">24,80 €</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
+<div class="item">
+    <figure>
+        <img src="https://bixoto.com/media/catalog/product/cache/2e45ba69d70625e0fc47dbc2d34862e1/8/4/8410199002006_S4600622_P02.jpg" alt="productos"/>
+    </figure>
+    <div class="producto">
+        <h2>Patatas Fritas Lays (160 g)</h2>
+        <p class="price">0.90 €</p>
+        <button>Añadir al carrito</button>
+    </div>
+</div>
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especial de yogurt!</h2>
+    <div class="item">
+        <figure>
+            <img src="https://www.dia.es/product_images/150913/150913_ISO_0_ES.jpg?imwidth=392" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Yogurt bebido 33cl</h2>
+            <p class="price">0,40 €/unidad</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+<div class="ofertas-especiales">
+        <h2 class="title h2">¡Ofertas especiales de esparragos! </h2>
+        <div class="item">
+            <figure>
+                <img src="https://carretilla.info/img/platos/esparragos-verdes-primera.png" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Esparragos verdes- carretilla</h2>
+                <p class="price">1,20 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+
+</div>
+<div class="ofertas-especiales">
+        <h2 class="title h2">¡Ofertas especiales de carne! </h2>
+        <div class="item">
+            <figure>
+                <img src="https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202109/02/00118411200126____4__1200x1200.jpg" alt="productos"/>
+            </figure>
+            <div class="producto">
+                <h2>Carne troceada para estofado de añojo IGP Carne de Ávila peso aproximado bandeja 500 g</h2>
+                <p class="price">4,50 €</p>
+                <button>Añadir al carrito</button>
+            </div>
+        </div>
+</div>
+
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especiales de patatas! </h2>
+    <div class="item">
+        <figure>
+            <img src="https://www.lacasadelasgolosinas.com/11814-large_default/pringles-original-165gr-1u.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Patatas fritas pringles</h2>
+            <p class="price">1,10 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especiales de yogures! </h2>
+    <div class="item">
+        <figure>
+            <img src="https://www.supermaxi.com/wp-content/uploads/2021/06/7861042567363.png" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Supermaxi Yogurt Botellita Fresa</h2>
+            <p class="price">0,40 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+
+<div class="ofertas-especiales">
+    <h2 class="title h2">¡Ofertas especiales de queso! </h2>
+    <div class="item">
+        <figure>
+            <img src="https://static.wixstatic.com/media/3a8b46_45eb139ee8454a6cb0ce28cfa149a2fa~mv2.jpg/v1/fill/w_500,h_500,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/3a8b46_45eb139ee8454a6cb0ce28cfa149a2fa~mv2.jpg" alt="productos"/>
+        </figure>
+        <div class="producto">
+            <h2>Queso ganadero mezcla semi Kg</h2>
+            <p class="price">15,50 €</p>
+            <button>Añadir al carrito</button>
+        </div>
+    </div>
+</div>
+    </div>
+</body>
+</html>
+
