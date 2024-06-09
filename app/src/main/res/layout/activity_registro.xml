@@ -24,7 +24,7 @@
             android:layout_width="343dp"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-light"
-            android:text="Binary Technology S.L"
+            android:text="Binary Global S.L"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -68,8 +68,7 @@
                 <EditText
                     android:id="@+id/txtnom"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/pwd" />
+                    android:layout_height="wrap_content" />
 
                 <View
                     android:layout_width="wrap_content"
@@ -85,8 +84,7 @@
                 <EditText
                     android:id="@+id/txtApell"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/pwd" />
+                    android:layout_height="wrap_content" />
 
                 <!-- Campo de Teléfono -->
                 <TextView
@@ -102,7 +100,6 @@
                     android:layout_height="wrap_content"
                     android:inputType="phone" />
 
-                <!-- Campo de Dirección -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -135,7 +132,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:alpha="1.7"
-                    android:text="Ingrese su CIF"
+                    android:text="Ingrese su CP"
                     android:textStyle="bold" />
 
                 <EditText

@@ -20,16 +20,11 @@
         android:orientation="vertical"
         android:padding="20dp" >
 
-        <ImageView
-            android:layout_width="49dp"
-            android:layout_height="47dp"
-            android:src="@drawable/shopping" />
-
         <TextView
-            android:layout_width="171dp"
-            android:layout_height="wrap_content"
+            android:layout_width="177dp"
+            android:layout_height="103dp"
             android:fontFamily="sans-serif-light"
-            android:text="Binary Technology S.L"
+            android:text="Binary Global S.L"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textStyle="bold" />
@@ -69,12 +64,13 @@
             <View
                 android:layout_width="wrap_content"
                 android:layout_height="30dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ingrese su usuario"
                 android:alpha="1.7"
-                android:textStyle="bold"/>
+                android:text="Ingrese su id  de usuario"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/txtidUser"

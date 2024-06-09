@@ -29,7 +29,6 @@ public class Profile extends Fragment {
     private String mParam2;
 
     public Profile() {
-        // Required empty public constructor
     }
 
     public static Profile newInstance(String param1, String param2) {
