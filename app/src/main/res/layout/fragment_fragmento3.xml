@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_degradado"
+    android:layout_gravity="center"
     tools:context=".Fragmentos.Fragmento3">
 
     <LinearLayout
@@ -26,11 +27,13 @@
 
         <FrameLayout
             android:layout_width="match_parent"
+            android:layout_gravity="center"
             android:layout_height="224dp">
 
             <WebView
                 android:id="@+id/webView1"
                 android:layout_width="277dp"
+                android:layout_gravity="center"
                 android:layout_height="173dp" >
             </WebView>
 
@@ -38,12 +41,14 @@
                 android:id="@+id/button1"
                 android:layout_width="277dp"
                 android:layout_height="173dp"
+                android:layout_gravity="center"
                 android:onClick="CatalogoElectronica" />
 
             <ImageView
                 android:id="@+id/imageViewelectro"
                 android:layout_width="277dp"
                 android:layout_height="173dp"
+                android:layout_gravity="center"
                 android:src="@drawable/folletoelectro" />
 
         </FrameLayout>
@@ -60,23 +65,27 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="286dp"
+            android:layout_gravity="center"
             android:layout_marginTop="1dp"
             android:background="@android:color/transparent">
 
             <WebView
                 android:id="@+id/webView2"
                 android:layout_width="284dp"
+                android:layout_gravity="center"
                 android:layout_height="177dp" />
 
             <Button
                 android:id="@+id/button2"
                 android:layout_width="284dp"
+                android:layout_gravity="center"
                 android:layout_height="177dp"
                 android:onClick="CatalogoAlimentacion" />
 
             <ImageView
                 android:id="@+id/imageViewalim"
                 android:layout_width="284dp"
+                android:layout_gravity="center"
                 android:layout_height="177dp"
                 android:src="@drawable/folletoalim" />
 
